@@ -1,0 +1,348 @@
+/* ============================================
+   GLOBAL STYLES & VARIABLES
+   Change the colors here to re-theme the whole site.
+   ============================================ */
+:root {
+  --color-bg: #fdfcfa;
+  --color-bg-alt: #f4f1ec;
+  --color-text: #2d2a26;
+  --color-text-soft: #5c564e;
+  --color-accent: #1f6f5c;       /* deep green — buttons, links, highlights */
+  --color-accent-soft: #e3efeb;
+  --color-card: #ffffff;
+  --color-border: #e6e1d9;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(45, 42, 38, 0.07);
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ============================================
+   LAYOUT HELPERS
+   ============================================ */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-alt {
+  background: var(--color-bg-alt);
+}
+
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.section-intro {
+  color: var(--color-text-soft);
+  max-width: 640px;
+  margin-bottom: 2.25rem;
+}
+
+/* ============================================
+   1. HERO / HEADER
+   ============================================ */
+.hero {
+  background: linear-gradient(160deg, #ffffff 0%, var(--color-accent-soft) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nav-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+.hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 5.5rem;
+}
+
+.hero-eyebrow {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.hero-headline {
+  font-size: 1.2rem;
+  color: var(--color-text-soft);
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #185a4b;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent-soft);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   2. ABOUT ME
+   ============================================ */
+.about-text {
+  max-width: 700px;
+  font-size: 1.08rem;
+  color: var(--color-text-soft);
+}
+
+/* ============================================
+   3. WHAT I BRING — cards
+   ============================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(45, 42, 38, 0.1);
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--color-text-soft);
+  font-size: 0.97rem;
+}
+
+/* ============================================
+   4. CAREER BACKGROUND
+   ============================================ */
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem 2.5rem;
+}
+
+.background-item {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.25rem;
+}
+
+.background-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.background-item p {
+  color: var(--color-text-soft);
+  font-size: 0.97rem;
+}
+
+/* ============================================
+   5. PROJECTS
+   ============================================ */
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-tag {
+  align-self: flex-start;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+}
+
+.project-links {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.project-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   6. CONTACT
+   ============================================ */
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, border-color 0.2s;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-accent);
+}
+
+.contact-value {
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--color-text-soft);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   SMALL SCREENS
+   ============================================ */
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  .section {
+    padding: 3.25rem 0;
+  }
+
+  .nav {
+    justify-content: center;
+    text-align: center;
+  }
+}
