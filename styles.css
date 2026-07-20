@@ -284,8 +284,18 @@ h2 {
 }
 
 .background-item {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent);
-  padding-left: 1.25rem;
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.background-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(31, 41, 55, 0.1);
 }
 
 .background-item h3 {
