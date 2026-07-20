@@ -290,7 +290,7 @@ h2 {
 
 .background-item h3 {
   font-size: 1.25rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
 }
 
 .background-item p {
@@ -330,18 +330,31 @@ h2 {
 .project-links {
   margin-top: auto;
   padding-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
   color: var(--color-accent);
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
+  transition: transform 0.15s, background 0.2s, color 0.2s;
 }
 
 .project-link:hover {
+  background: var(--color-accent-faint);
   color: var(--color-accent-dark);
-  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+.project-link:active {
+  transform: scale(0.97);
 }
 
 /* ============================================
@@ -421,6 +434,16 @@ h2 {
 @media (max-width: 600px) {
   .hero-content {
     padding: 3.5rem 1.5rem 4rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .section {
