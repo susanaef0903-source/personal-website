@@ -144,6 +144,14 @@ h2 {
   font-size: 1.2rem;
   color: var(--color-text-soft);
   max-width: 620px;
+  margin-bottom: 0.75rem;
+}
+
+.hero-subline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  max-width: 620px;
   margin-bottom: 2rem;
 }
 
