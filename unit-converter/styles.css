@@ -1,11 +1,14 @@
 /* Same color scheme as my personal website, so the two feel related */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
-  --color-bg: #fdfcfa;
-  --color-text: #2d2a26;
-  --color-text-soft: #5c564e;
-  --color-accent: #1f6f5c;
-  --color-accent-soft: #e3efeb;
-  --color-border: #e6e1d9;
+  --color-bg: #ffffff;
+  --color-text: #1F2937;
+  --color-text-soft: #374151;
+  --color-accent: #2563EB;
+  --color-accent-dark: #1D4ED8;
+  --color-accent-soft: #EFF6FF;
+  --color-border: #E5E7EB;
 }
 
 * {
@@ -15,7 +18,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
   background: linear-gradient(160deg, #ffffff 0%, var(--color-accent-soft) 100%);
   color: var(--color-text);
   min-height: 100vh;
@@ -79,7 +82,7 @@ button {
   font-weight: 600;
   padding: 0.75rem;
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
   background: var(--color-accent);
   color: #ffffff;
   cursor: pointer;
@@ -87,7 +90,7 @@ button {
 }
 
 button:hover {
-  background: #185a4b;
+  background: var(--color-accent-dark);
 }
 
 /* The answer line — hidden until it has text in it */
