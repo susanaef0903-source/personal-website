@@ -215,6 +215,10 @@ h2 {
   transform: translateY(-2px);
 }
 
+.btn:active {
+  transform: scale(0.97);
+}
+
 /* ============================================
    2. ABOUT ME
    ============================================ */
@@ -251,6 +255,12 @@ h2 {
 .card-icon {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+}
+
+.card-icon:hover {
+  transform: scale(1.1);
 }
 
 .card h3 {
@@ -330,6 +340,7 @@ h2 {
 }
 
 .project-link:hover {
+  color: var(--color-accent-dark);
   text-decoration: underline;
 }
 
