@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="game">
+    <h1>Rock, Paper, Scissors</h1>
+    <p class="subtitle">First to 5 wins the match</p>
+
+    <!-- Scoreboard: you vs. the computer -->
+    <div class="scoreboard">
+      <div class="score-box">
+        <span class="score-label">You</span>
+        <span class="score" id="player-score">0</span>
+      </div>
+      <div class="score-box">
+        <span class="score-label">Computer</span>
+        <span class="score" id="computer-score">0</span>
+      </div>
+    </div>
+
+    <!-- The two hands shown after each round -->
+    <div class="hands">
+      <span class="hand" id="player-hand">❔</span>
+      <span class="vs">vs</span>
+      <span class="hand" id="computer-hand">❔</span>
+    </div>
+
+    <!-- Round result ("You win this round!" etc.) appears here -->
+    <p id="result" class="result">Make your first move!</p>
+
+    <!-- The three choices -->
+    <div class="choices">
+      <button class="choice-btn" data-choice="rock">✊<span>Rock</span></button>
+      <button class="choice-btn" data-choice="paper">✋<span>Paper</span></button>
+      <button class="choice-btn" data-choice="scissors">✌️<span>Scissors</span></button>
+    </div>
+
+    <!-- Hidden until someone reaches 5 -->
+    <button id="play-again-btn" class="play-again hidden">Play again</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
