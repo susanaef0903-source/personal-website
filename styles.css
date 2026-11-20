@@ -175,6 +175,21 @@ h2 {
   margin-bottom: 1.75rem;
 }
 
+.hero-quote {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--color-text-soft);
+  max-width: 620px;
+  margin-top: -0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-quote-author {
+  font-style: normal;
+  font-weight: 600;
+  margin-left: 0.35rem;
+}
+
 .hero-actions {
   display: flex;
   gap: 1rem;
